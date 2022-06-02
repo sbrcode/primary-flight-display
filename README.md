@@ -4,67 +4,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, once cloned you can run:
+
+### `yarn install`
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The principle is to simulate a "primary flight display" i.e. a visual representation of the on-board instrument present in the aircraft.
+This on-board instrument allows you to view certain flight parameters such as altitude, speed, attitude, heading, etc.)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Image text](./src/assets/primary-flight-display.png)
 
-### `yarn test`
+The usual representation (above) includes at least 4 main pieces of information:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- the speed (left column)
+- the attitude of the plane (in the center - represented in relation to the horizon line)
+- the altitude (right column)
+- the direction (at the bottom, represented by a half compass)
 
-### `yarn build`
+This is mainly what interests us here: simulating the movement of flight indicators on a web page. For a little more detail and especially to visualize the animation, here is a video which explains and very clearly shows the required animation: https://www.youtube.com/watch?v=Pq_SPOwYu7A
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Regarding the expected, the ideal would be to visualize and animate the speed, altitude and compass (if possible). It is not necessary to represent/animate the attitude of the plane.
+The ideal visual representation should not be as complex as the screenshot above, but as minimalistic as possible (see http://www.flightwatching.com/ for a good example).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For data there is a csv file in @src/data.
+The columns in order of appearance: Radio Altitude; Angle ; Ground Speed; Magnetic Heading; True Heading; Pitch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
