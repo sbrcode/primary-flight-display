@@ -10,6 +10,8 @@ In the project directory, once cloned you can run:
 
 ### `yarn start`
 
+## Expected
+
 The principle is to simulate a "primary flight display" i.e. a visual representation of the on-board instrument present in the aircraft.
 This on-board instrument allows you to view certain flight parameters such as altitude, speed, attitude, heading, etc.)
 
