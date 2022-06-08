@@ -1,58 +1,47 @@
-import { useState } from "react"
+import Table from "@mui/material/Table"
+import TableBody from "@mui/material/TableBody"
+import TableCell from "@mui/material/TableCell"
+import TableContainer from "@mui/material/TableContainer"
+import TableHead from "@mui/material/TableHead"
+import TableRow from "@mui/material/TableRow"
+import Paper from "@mui/material/Paper"
 import "./App.css"
-import Papa from "papaparse"
+import datas from "./data/FlightDataMin.json"
+import { Headers } from "./utils/Constants"
 
-function App() {
-  const [tableRows, setTableRows] = useState([])
-  const [values, setValues] = useState([])
-
-  const changeHandler = (event) => {
-    Papa.parse(event.target.files[0], {
-      header: true,
-      skipEmptyLines: true,
-      complete: function (results) {
-        const rowsArray = []
-        const valuesArray = []
-
-        results.data.map((d) => {
-          rowsArray.push(Object.keys(d))
-          return valuesArray.push(Object.values(d))
-        })
-
-        setTableRows(rowsArray[0])
-        setValues(valuesArray)
-      },
-    })
-  }
-
+const App = () => {
   return (
-    <div className="App">
-      <input
-        type="file"
-        name="file"
-        accept=".csv"
-        onChange={changeHandler}
-        style={{ display: "block", margin: "10px auto" }}
-      />
-      {/* <table>
-        <thead>
-          <tr>
-            {tableRows.map((rows, index) => {
-              return <th key={index}>{rows}</th>
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {values.map((value, index) => (
-            <tr key={index}>
-              {value.map((val, i) => (
-                <td key={i}>{val}</td>
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            {Headers &&
+              Headers.map((title, index) => (
+                <TableCell key={index} align="right">
+                  {title}
+                </TableCell>
               ))}
-            </tr>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {datas.map((data, index) => (
+            <TableRow
+              key={index}
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {data.RALT}
+              </TableCell>
+              <TableCell align="right">{data.ROLL}</TableCell>
+              <TableCell align="right">{data.GS}</TableCell>
+              <TableCell align="right">{data.MH}</TableCell>
+              <TableCell align="right">{data.TH}</TableCell>
+              <TableCell align="right">{data.PTCH}</TableCell>
+            </TableRow>
           ))}
-        </tbody>
-      </table> */}
-    </div>
+        </TableBody>
+      </Table>
+    </TableContainer>
   )
 }
 
