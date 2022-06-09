@@ -1,3 +1,3 @@
-const Welcome = () => <div>BIENVENUE</div>
+const Welcome = () => <div>Bienvenue !</div>
 
 export default Welcome
