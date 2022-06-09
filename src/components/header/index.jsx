@@ -9,6 +9,7 @@ const styledLink = {
   marginLeft: 25,
   textDecoration: "none",
   fontSize: 16,
+  color: "black",
 }
 
 const Header = () => {
