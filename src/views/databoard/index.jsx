@@ -1,6 +1,5 @@
 import { DataGrid } from "@mui/x-data-grid"
-import "./App.css"
-import datas from "./data/FlightData.json"
+import datas from "../../data/FlightData.json"
 
 const Headers = [
   { field: "RALT", headerName: "Radio Altitude", type: "number", width: 196 },
@@ -13,9 +12,8 @@ const Headers = [
 
 datas.forEach((data, index) => (data["id"] = index))
 
-const App = () => {
+const DataBoard = () => {
   const Rows = datas
-
   return (
     <div className="App" style={{ height: 900 }}>
       <DataGrid
@@ -28,5 +26,4 @@ const App = () => {
   )
 }
 
-export default App
-
+export default DataBoard
