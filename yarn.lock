@@ -7527,6 +7527,11 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-typescript-flight-indicators@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-typescript-flight-indicators/-/react-typescript-flight-indicators-1.0.3.tgz#dd1b7212832490f1ce96ac9eb404af3668b6c764"
+  integrity sha512-XaLGknpUZd7ZUYB5hT1/aL7EsKFOigJNVKUf8hxHqYXxa8qRxnMmeWzNOZOj5SuLV40iBfBqIxkirbPyGDU0Iw==
+
 react@^18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.1.0.tgz#6f8620382decb17fdc5cc223a115e2adbf104890"
