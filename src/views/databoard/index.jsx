@@ -1,8 +1,9 @@
 import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import { Headers, Rows } from "../../data"
+import "../../index.css"
 
 const DataBoard = () => (
-  <div className="App" style={{ height: 900 }}>
+  <div className="databoard">
     <DataGrid
       rows={Rows}
       columns={Headers}
