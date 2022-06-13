@@ -4,7 +4,7 @@ import "../../index.css"
 const Header = () => (
   <nav className="nav">
     <Link to="/" className="link">
-      Home
+      Board
     </Link>
     <Link to="databoard" className="link">
       Datas
